@@ -24,7 +24,7 @@ class ShoppingList {
     if(item instanceof ShoppingListItem ){
       this.items.splice(this.items.indexOf(item), 1);
 
-    } else if( item === undefined && this.items.length > 0) {
+    } else if( item === undefined) {
       this.items.pop();
 
     } else {
