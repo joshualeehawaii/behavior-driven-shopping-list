@@ -118,5 +118,27 @@ describe('ShoppingList Class', function(){
 
   });
 
+  it('should have a method named removeItem', function(){
+    expect(testList.removeItem).to.exist;
+  });
+
+  it('should remove ShoppingListItem from the array or throw error', function(){
+
+    var item1 = new ShoppingListItem('eggs', 'protein');
+    var item2 = new ShoppingListItem('bacon', 'protein');
+    var item3 = 'mcflurry';
+
+    testList.addItem(item1);
+    testList.addItem(item2);
+    testList.removeItem(item1);
+    testList.removeItem(item2);
+
+    expect(testList.items.length).to.not.be.equal(2);
+    expect(testList.items).to.be.deep.equal([]);
+    testList.addItem(item1);
+    (function(){testList.removeItem();}).should.not.throw(Error, 'CRAZY');
+    (function(){testList.removeItem();}).should.throw(Error, 'CRAZY');
+
+  });
 
 });
