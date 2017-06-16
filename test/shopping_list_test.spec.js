@@ -79,6 +79,7 @@ describe('ShoppingListItem Class', function(){
 
 var ShoppingList = require('../js/shopping_list.js');
 
+
 describe('ShoppingList Class', function(){
 
   beforeEach(function() {
@@ -101,6 +102,20 @@ describe('ShoppingList Class', function(){
 
   it('should have a method named addItem', function(){
     expect(testList.addItem).to.exist;
+  });
+
+  it('should add ShoppingListItem to items array or throw error', function(){
+
+    var item1 = new ShoppingListItem('eggs', 'protein');
+    var item2 = new ShoppingListItem('bacon', 'protein');
+    var item3 = 'mcflurry';
+
+    testList.addItem(item1);
+    testList.addItem(item2);
+    expect(testList.items.length).to.be.equal(2);
+
+    (function(){testList.addItem(item3);}).should.throw(Error, 'AHHHH');
+
   });
 
 
