@@ -82,13 +82,22 @@ var ShoppingList = require('../js/shopping_list.js');
 describe('ShoppingList Class', function(){
 
   beforeEach(function() {
-    testItem = new ShoppingList();
+    testList = new ShoppingList();
   });
 
   //ShoppingList is a class
   it('should be a class', function(){
-    var classTest = testItem instanceof ShoppingList;
+    var classTest = testList instanceof ShoppingList;
     expect(classTest).to.equal(true);
   });
+
+  it('should have a property called name', function(){
+
+    expect(testList.items).to.exist;
+    var randomList = new ShoppingList();
+    expect(randomList.items).to.deep.equal([]);
+
+  });
+
 
 });
