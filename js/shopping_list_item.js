@@ -19,6 +19,10 @@ class ShoppingListItem {
     this.is_done = false;
   }
 
+  render(){
+    //Does some stuff
+  }
+
 }
 
 module.exports = ShoppingListItem;
