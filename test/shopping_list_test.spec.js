@@ -28,4 +28,7 @@ describe('ShoppingListItem Class', function(){
     expect(testVar.is_done).to.equal('true');
   });
 
+  //ShoppingListItem has a constructor sets name and description
+
+
 });
