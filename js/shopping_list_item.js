@@ -11,6 +11,10 @@ class ShoppingListItem {
 
   }
 
+  check(){
+    this.is_done = true;
+  }
+
 }
 
 module.exports = ShoppingListItem;
