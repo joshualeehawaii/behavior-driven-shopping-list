@@ -99,5 +99,9 @@ describe('ShoppingList Class', function(){
 
   });
 
+  it('should have a method named addItem', function(){
+    expect(testList.addItem).to.exist;
+  });
+
 
 });
