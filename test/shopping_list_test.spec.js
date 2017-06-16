@@ -75,6 +75,20 @@ describe('ShoppingListItem Class', function(){
     expect( testItem.render() ).to.be.an('string');
   });
 
+});
 
+var ShoppingList = require('../js/shopping_list.js');
+
+describe('ShoppingList Class', function(){
+
+  beforeEach(function() {
+    testItem = new ShoppingList();
+  });
+
+  //ShoppingList is a class
+  it('should be a class', function(){
+    var classTest = testItem instanceof ShoppingList;
+    expect(classTest).to.equal(true);
+  });
 
 });
