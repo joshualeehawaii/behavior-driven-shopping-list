@@ -135,9 +135,8 @@ describe('ShoppingList Class', function(){
 
     expect(testList.items.length).to.not.be.equal(2);
     expect(testList.items).to.be.deep.equal([]);
-    testList.addItem(item1);
     (function(){testList.removeItem();}).should.not.throw(Error, 'CRAZY');
-    (function(){testList.removeItem();}).should.throw(Error, 'CRAZY');
+    (function(){testList.removeItem(item3);}).should.throw(Error, 'CRAZY');
 
   });
 
