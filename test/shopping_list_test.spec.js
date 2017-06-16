@@ -67,4 +67,8 @@ describe('ShoppingListItem Class', function(){
 
   });
 
+  it('should have a method named render', function(){
+    expect(testItem.render).to.exist;
+  });
+
 });
