@@ -21,6 +21,12 @@ class ShoppingListItem {
 
   render(){
     //Does some stuff
+    var rendering = `<li class="completed_${ this.is_done }"> \
+    <span>${ this.name }</span> \
+    <span>${ this.description }</span> \
+    </li>`;
+
+    return rendering;
   }
 
 }

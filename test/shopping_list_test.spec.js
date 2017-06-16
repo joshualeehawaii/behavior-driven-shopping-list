@@ -71,4 +71,10 @@ describe('ShoppingListItem Class', function(){
     expect(testItem.render).to.exist;
   });
 
+  it('should render a <li> as a string', function(){
+    expect( testItem.render() ).to.be.an('string');
+  });
+
+
+
 });
