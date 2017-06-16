@@ -9,6 +9,10 @@ class ShoppingList {
 
   }
 
+  addItem() {
+    //will do some stuff
+  }
+
 }
 
 module.exports = ShoppingList;
