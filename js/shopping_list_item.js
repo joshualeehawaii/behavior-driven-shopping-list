@@ -15,6 +15,10 @@ class ShoppingListItem {
     this.is_done = true;
   }
 
+  uncheck(){
+    this.is_done = false;
+  }
+
 }
 
 module.exports = ShoppingListItem;

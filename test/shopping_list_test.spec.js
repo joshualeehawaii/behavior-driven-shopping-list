@@ -42,11 +42,28 @@ describe('ShoppingListItem Class', function(){
     expect(randomItem.description).to.equal(testDescription);
   });
 
-  it('is_done should return true', function(){
+  it('should have a method named check', function(){
+    expect(testItem.check).to.exist;
+  });
+
+  it('check should set is_done to true', function(){
     var newItem = new ShoppingListItem('egg', 'proten');
     expect(newItem.is_done).to.equal(false);
     newItem.check();
     expect(newItem.is_done).to.not.equal(false);
+
+  });
+
+  it('should have a method named uncheck', function(){
+    expect(testItem.uncheck).to.exist;
+  });
+
+  it('uncheck should set is_done to false', function(){
+    var newItem = new ShoppingListItem('egg', 'protein');
+    newItem.check();
+    expect(newItem.is_done).to.not.equal(false);
+    newItem.uncheck();
+    expect(newItem.is_done).to.equal(false);
 
   });
 
