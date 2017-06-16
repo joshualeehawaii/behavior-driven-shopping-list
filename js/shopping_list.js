@@ -13,7 +13,6 @@ class ShoppingList {
   }
 
   addItem(item) {
-    //will do some stuff
     if(item instanceof ShoppingListItem ){
       this.items.push(item);
     } else {
@@ -21,6 +20,17 @@ class ShoppingList {
     }
   }
 
+  removeItem(item) {
+    if(item instanceof ShoppingListItem ){
+      this.items.splice(this.items.indexOf(item), 1);
+
+    } else if( item === undefined && this.items.length > 0) {
+      this.items.pop();
+
+    } else {
+      throw new Error('ARE YOU CRAZY!!!! YOU CANT REMOVE ITEMS YOU DONT HAVE');
+    }
+  }
 }
 
 module.exports = ShoppingList;
