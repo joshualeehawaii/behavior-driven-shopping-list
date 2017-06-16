@@ -42,5 +42,12 @@ describe('ShoppingListItem Class', function(){
     expect(randomItem.description).to.equal(testDescription);
   });
 
+  it('is_done should return true', function(){
+    var newItem = new ShoppingListItem('egg', 'proten');
+    expect(newItem.is_done).to.equal(false);
+    newItem.check();
+    expect(newItem.is_done).to.not.equal(false);
+
+  });
 
 });
