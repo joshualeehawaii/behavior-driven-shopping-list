@@ -31,6 +31,10 @@ class ShoppingList {
       throw new Error('ARE YOU CRAZY!!!! YOU CANT REMOVE ITEMS YOU DONT HAVE');
     }
   }
+
+  render(){
+
+  }
 }
 
 module.exports = ShoppingList;
